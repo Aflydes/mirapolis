@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Filesystem</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/style/main.css">
+
+    
+</head>
+<body>
+    <div class="hidden-svg-sprite">
+        <svg width="0" height="0" class="hidden">
+            <symbol fill="#000000" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="file">
+              <path d="M4 30.016q0 0.832 0.576 1.408t1.44 0.576h20q0.8 0 1.408-0.576t0.576-1.408v-22.016l-8-8h-13.984q-0.832 0-1.44 0.608t-0.576 1.408v28zM8 28v-24h10.016v6.016h5.984v17.984h-16z"></path>
+            </symbol>
+            <symbol version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" id="folder">
+              <path d="M853.333333 256H469.333333l-85.333333-85.333333H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v170.666667h853.333334v-85.333334c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFA000"></path>
+              <path class="animate-folder-path" d="M853.333333 256H170.666667c-46.933333 0-85.333333 38.4-85.333334 85.333333v426.666667c0 46.933333 38.4 85.333333 85.333334 85.333333h682.666666c46.933333 0 85.333333-38.4 85.333334-85.333333V341.333333c0-46.933333-38.4-85.333333-85.333334-85.333333z" fill="#FFCA28"></path>
+            </symbol>
+          </svg>
+    </div>
+    <main class="main">
+        <div class="filesystem">
+            <ul class="filesystem__level filesystem__level-one">
+                <li class="filesystem__folder open">
+                    <div class="filesystem__folder-button"></div>
+                    <span class="filesystem__folder-name">
+                        <svg width="18px" height="18px" class="icon">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Folder 1
+                    </span>
+                    <ul class="filesystem__level filesystem__level-two">
+                        <li class="filesystem__file">
+                            <span class="filesystem__file-name">
+                                <svg width="18px" height="18px" class="icon">
+                                    <use xlink:href="#file"></use>
+                                </svg>
+                                Item 1.1
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filesystem__folder open">
+                    <div class="filesystem__folder-button"></div>
+                    <span class="filesystem__folder-name">
+                        <svg width="18px" height="18px" class="icon">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Folder 2
+                    </span>
+                    <ul class="filesystem__level filesystem__level-two">
+                        <li class="filesystem__folder open">
+                            <div class="filesystem__folder-button"></div>
+                            <span class="filesystem__folder-name">
+                                <svg width="18px" height="18px" class="icon">
+                                    <use xlink:href="#folder"></use>
+                                </svg>
+                                SubFolder 2.1
+                            </span>
+                            <ul class="filesystem__level filesystem__level-two">
+                                <li class="filesystem__file">
+                                    <span class="filesystem__file-name">
+                                        <svg width="18px" height="18px" class="icon">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                        File 2.1.1
+                                    </span>
+                                </li>
+                                <li class="filesystem__file">
+                                    <span class="filesystem__file-name">
+                                        <svg width="18px" height="18px" class="icon">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                        File 2.1.2
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="filesystem__file">
+                            <span class="filesystem__file-name">
+                                <svg width="18px" height="18px" class="icon">
+                                    <use xlink:href="#file"></use>
+                                </svg>
+                                Item 2.2
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filesystem__folder">
+                    <div class="filesystem__folder-button"></div>
+                    <span class="filesystem__folder-name">
+                        <svg width="18px" height="18px" class="icon">
+                            <use xlink:href="#folder"></use>
+                        </svg>
+                        Folder 3
+                    </span>
+                    <ul class="filesystem__level filesystem__level-two">
+                        <li class="filesystem__file">
+                            <span class="filesystem__file-name">
+                                <svg width="18px" height="18px" class="icon">
+                                    <use xlink:href="#file"></use>
+                                </svg>
+                                Item 3.1
+                            </span>
+                        </li>
+                        <li class="filesystem__file">
+                            <span class="filesystem__file-name">
+                                <svg width="18px" height="18px" class="icon">
+                                    <use xlink:href="#file"></use>
+                                </svg>
+                                Item 3.1
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="filesystem__file">
+                    <span class="filesystem__file-name">
+                        <svg width="18px" height="18px" class="icon">
+                            <use xlink:href="#file"></use>
+                        </svg>
+                        File 4
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="assets/js/functions.js"></script>
+</body>
+</html>
